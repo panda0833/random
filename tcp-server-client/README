@@ -1,0 +1,1 @@
+Create tcp server in node, and send hello via a python client while the server transmits 'world' back to the client.  Print out the number of connections (new sockets created) via python and the amount of time elapsed (this can be configured in the python script).
