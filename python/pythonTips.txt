@@ -1,0 +1,26 @@
+>>> w = png.Writer(640, 480, bitdepth=8, interlace=0, planes=4, alpha=True)
+>>> help(w.write)
+
+>>> w.write(f, l)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'f' is not defined
+>>> (640, 480, <itertools.imap object at 0xffef9ccc>, {'bitdepth': 8, 'interlace': 0                                                                                                  , 'planes': 4, 'greyscale': False, 'alpha': True, 'gamma': 0.45455000000000001,                                                                                                   'size': (640, 480)})
+  File "<stdin>", line 1
+    (640, 480, <itertools.imap object at 0xffef9ccc>, {'bitdepth': 8, 'interlace': 0                                                                                                  , 'planes': 4, 'greyscale': False, 'alpha': True, 'gamma': 0.45455000000000001,                                                                                                   'size': (640, 480)})
+               ^
+SyntaxError: invalid syntax
+>>> w.write(file, l)
+>>> file.close()
+>>> f = open('c:\NovinderSingh\cave1.png', 'wb')
+>>> a = [1,2,3,4]
+>>> b=a
+
+>>> png.Reader(open('C:\NovinderSingh\cave.png'))
+<png.Reader instance at 0xffef9fac>
+>>> _.read()
+(640, 480, <itertools.imap object at 0xffef9ccc>, {'bitdepth': 8, 'interlace': 0                                                                                                  , 'planes': 4, 'greyscale': False, 'alpha': True, 'gamma': 0.45455000000000001,                                                                                                   'size': (640, 480)})
+>>> l = list(_[2])
+
+l = copy.deepcopy(lcopy) 
+
