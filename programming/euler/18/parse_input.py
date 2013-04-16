@@ -1,3 +1,4 @@
+import re
 #parse file into list
 l = []
 f = open("input", "r")
