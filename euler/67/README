@@ -1,0 +1,18 @@
+parse_input.py will open input file, and read it into a list variable named l:
+>>> execfile("parse_input.py")
+>>> l
+[[75], [95, 64], [17, 47, 82], .......
+
+
+Creat the tree from the above list 
+>>> execfile("18.py")
+>>> tr = build_tree(0,0,l)
+
+
+run dijkstra's algorithm 
+
+>>> dijkstra(tr)
+Maxd is:  1074
+
+
+
