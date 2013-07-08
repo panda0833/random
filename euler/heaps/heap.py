@@ -15,43 +15,60 @@ def insert(x):
    H.append(None)
    print_heap()
 
-def getMin(x):
+def getMin():
+   global N 
+   print N
    x = H[0]
+   N = N - 1
    H[0] = H[N]
    H[N] = None
-   bubble_down(0)
-   --N
+   bubble_down(1)
    return x
    
 def bubble_down(n):
-   k = n*2
+   k = (n*2)-1
    #base case
-   if k > N:
+   print k, N
+   if k >= N:
       return
    x = None
-   if k+1 > N:
+   #for the 0 starting index
+   n = n - 1
+   if k+1>=N:
       if H[n] > H[k]:
          x = k
          swap(n, k)
+      print 'bsd'
    else:
+      print 'asd'
       if H[n] > max(H[k], H[k+1]):
          if H[k] > H[k+1]:
             x = k+1
             swap(n, k+1)
+            print 'bb'
          else:
             x = k
             swap(n,k)
-   bubble_down(x)
+            print 'cc'
+   #adding one makes searching for elements easier in the next iteration
+   #if we don't add a 1, lets say n = 2 (with 0 base), then it's child elements
+   #in the array are not n*2 and n*2+1... instead they are actually n*3 and n*3+1
+   #bubble_down(x+1)
          
 def swap(n, k):
-   t = H[k+1]
-   H[k+1] = H[n]
+   t = H[k]
+   H[k] = H[n]
    H[n] = t
 
 #bubble  up or 'heapify'
 def bubble_up(n):
    #no need to get floor, since int values automatically get floor
-   v =n/2
+   #subtract one bc array starts at 0 index 
+   v =(n-1)/2
+   #base case
+   if v < 0:
+      return 
+   print v
    if H[n] < H[v]:
       #swap h[v] with h[n]
       t = H[v]
